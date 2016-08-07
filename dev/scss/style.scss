@@ -1,0 +1,71 @@
+$primary: #006699;
+$blue: #27A9E1;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+body {
+  font-family: Roboto;
+}
+
+ul {
+  background-color: transparent;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav {
+  text-align: center;
+  li {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    margin-right: 10px;
+
+    img {
+      width: 150px;
+    }
+  }
+
+}
+
+.item {
+  color: #777;
+  text-decoration: none;
+
+  //border: 2px solid #777;
+  //border-radius: 2px;
+  @include transition(border-color 250ms ease-in-out);
+
+  &:hover {
+    cursor: pointer;
+    border-color: #555;
+    hr {
+      border-bottom-color: $blue;
+    }
+  }
+
+  &:active {
+    border-color: #555;
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  hr {
+    border-bottom-color: #777;
+    @include transition(border-bottom-color 250ms ease-in-out);
+  }
+
+}
+h2 {
+  color: $primary;
+}
