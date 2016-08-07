@@ -30,7 +30,14 @@ ul {
     margin-right: 10px;
 
     img {
-      width: 150px;
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:visited{
+      color: #777;
     }
   }
 

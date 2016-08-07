@@ -9,7 +9,10 @@ import thunk from 'redux-thunk';
 import promise from 'redux-promise';
 import createLogger from 'redux-logger';
 import allReducers from './reducers';
+
 import App from './components/App';
+import Home from './components/Home';
+import About from './components/About';
 
 const logger = createLogger();
 const store = createStore(
@@ -24,8 +27,12 @@ ReactDOM.render(
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={App}>
+          <IndexRoute component={Home}/>
+          <Route path="/about" component={About}/>
         </Route>
       </Router>
     </Provider>,
     document.getElementById('root')
 );
+
+
