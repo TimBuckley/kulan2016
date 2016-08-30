@@ -1,23 +1,31 @@
-/**
- * Created by Daniel on 2016-08-07.
- */
 import React from 'react';
 import {IndexLink, Link} from 'react-router';
+import {Grid, Row, Col} from 'react-bootstrap';
 
-import UserList from '../containers/user-list';
-import UserDetails from '../containers/user-detail';
-
+var Slider = require('react-slick');
 
 export default class Home extends React.Component{
   render() {
+    var settings = {
+      dots: false,
+      infinite: false,
+      speed: 2500,
+      fade: true,
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
     return (
-      <div>
-        <h2>User List</h2>
-        <UserList />
-        <hr />
-        <h2>User Details</h2>
-        <UserDetails />
-      </div>
+        <div className="center pageContainer">
+          <div className="carouselContainer">
+            <Slider {...settings}>
+              <div><img src="img/slides/slide1.jpg"/></div>
+              <div><img src="img/slides/slide2.jpg"/></div>
+              <div><img src="img/slides/slide3.jpg"/></div>
+              <div><img src="img/slides/slide4.jpg"/></div>
+            </Slider>
+          </div>
+        </div>
     );
   }
 }
