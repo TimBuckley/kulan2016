@@ -18,6 +18,8 @@ import Contact from './components/Contact';
 import Guest from './components/Guest';
 import Booking from './components/Booking/Booking';
 
+import Tabletop from 'tabletop';
+
 const logger = createLogger();
 const store = createStore(
     allReducers,

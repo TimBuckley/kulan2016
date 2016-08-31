@@ -12,11 +12,10 @@ class Booking extends React.Component {
       key: 'https://docs.google.com/spreadsheets/d/1QxC20NcuHzqp1Fp7Dy2gpBDbJzN4YpmjiEcr7PSpsuM/pubhtml',
       callback: (data, tabletop) => this.data = data,
       simpleSheet: true,
-      parseNumbers: true,
-      wait: true
+      parseNumbers: true
     });
 
-    console.log(this.data);
+    console.log(this);
   }
 
   render() {
