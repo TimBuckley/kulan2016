@@ -17,6 +17,7 @@
     "cross-env": "^1.0.8",
     "css-loader": "^0.23.1",
     "expect": "^1.20.1",
+    "isomorphic-fetch": "^2.2.1",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.8.0",
     "react": "^15.1.0",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-2": "^6.13.0",
     "react-transform-hmr": "^1.0.4"
   }
 }

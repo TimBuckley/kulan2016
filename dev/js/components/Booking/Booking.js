@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Table} from 'react-bootstrap';
 import Tabletop from 'tabletop';
-import TableRow from './TableRow';
+import TableRow from '../TableRow';
 
 class Booking extends React.Component {
   constructor(props) {

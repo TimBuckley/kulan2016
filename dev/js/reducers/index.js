@@ -1,7 +1,5 @@
 import {combineReducers} from 'redux';
-import UserReducer from './reducer-users';
-import ActiveUserReducer from './reducer-active-user';
-import BookingReducer from './reduce-bookingData';
+import BookingReducer from './reducer-bookingData';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
 /*
@@ -10,8 +8,6 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
  * */
 
 const allReducers = combineReducers({
-  // users: UserReducer,
-  // activeUser: ActiveUserReducer,
   bookingData: BookingReducer,
   routing: routerReducer
 });
