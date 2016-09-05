@@ -2,4 +2,4 @@
 
 <!--![](http://i.imgur.com/DUiL9yn.png)-->
 
-## Refaktorerad från Angular till ReactJS
+## Refactored from Angular to ReactJS
