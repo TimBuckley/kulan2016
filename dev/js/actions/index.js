@@ -26,24 +26,23 @@ function receiveSpreadsheetError(error) {
 }
 
 // --- API ---
-function fetchTable(tableInfo) {
+function fetchTable(tableUrl) {
   // Code related to API here. Should just return a promise.
-  // Someting like...
-  return fetch(tableInfo);
+  return fetch(tableUrl);
 }
 
-
 // --- Thunks ---
-export default function getSpreadsheetData(tableInfo) {
+export default function getSpreadsheetData(tableUrl) {
   return function (dispatch, getState) {
     // Tell reducers that you are about to make a request.
     dispatch(requestSpreadsheet());
 
     // Make the request, then tell reducers about
     // whether it succeeded or not.
-    return fetchTable(tableInfo).then(
-      data => dispatch(receiveSpreadsheet(data)),
-      error => dispatch(receiveSpreadsheetError(error))
-    )
+    // Here, we update the app state with the results of the API call.
+    return fetch(tableUrl)
+      .then(response => response.json())
+        .then(data => dispatch(receiveSpreadsheet(data.feed.entry)),
+              error => dispatch(receiveSpreadsheetError(error)));
   }
 }

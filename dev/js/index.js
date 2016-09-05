@@ -27,9 +27,9 @@ const store = createStore(
   window.devToolsExtension ? window.devToolsExtension() : f => f)
 );
 
-const tableinfo = "https://spreadsheets.google.com/feeds/list/1QxC20NcuHzqp1Fp7Dy2gpBDbJzN4YpmjiEcr7PSpsuM/od6/public/basic?alt=json";
+const tableUrl = "https://spreadsheets.google.com/feeds/list/1QxC20NcuHzqp1Fp7Dy2gpBDbJzN4YpmjiEcr7PSpsuM/od6/public/basic?alt=json";
 
-store.dispatch(getSpreadsheetData(tableinfo));
+store.dispatch(getSpreadsheetData(tableUrl));
 
 // Create an enhanced history that syncs navigation events with the store
 // const history = syncHistoryWithStore(browserHistory, store);

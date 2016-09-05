@@ -1,5 +1,5 @@
 const initialState = {
-  spreadsheetData: {},
+  spreadsheetData: [],
   loading: false,
   errorMsg: ''
 };
@@ -24,7 +24,9 @@ export default function spreadsheet(state = initialState, action) {
       return {
         loading: false,
         errorMsg: action.payload.error
-      }
+      };
+
+    default:
+      return {...state};
   }
-  return state;
 }

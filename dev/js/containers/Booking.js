@@ -4,7 +4,7 @@ import {Grid, Table} from 'react-bootstrap';
 import TableRow from '../components/TableRow';
 
 class Booking extends Component {
-  render() {
+  render() {    
     return (
       <Grid fluid className="pageContainer">
         <h4>För att boka, skicka ett mail till oss <a href="mailto:boka@kulaniklappen.se">här!</a></h4>
